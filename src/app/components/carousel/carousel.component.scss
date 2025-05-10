@@ -1,0 +1,13 @@
+.carousel-container {
+    width: 100vw; /* Ocupa toda a largura da tela */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+  }
+  
+  .carousel-image {
+    width: 100%;
+    max-height: 400px; /* Ajuste a altura conforme necessário */
+    object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+  }
+  

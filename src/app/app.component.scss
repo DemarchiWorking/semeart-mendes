@@ -1,0 +1,209 @@
+body {
+    background: #fff;
+    padding: 32px;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    color: #222222;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Seção principal */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 34px; /* Ajuste conforme necessário */
+    background-image: url('../assets/cafe-fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between; /* Mantém os ícones à esquerda e contato à direita */
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+}
+
+/* Máscara verde com opacidade */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(155, 21, 18, 0.5);
+    z-index: 1; /* Mantém a máscara atrás dos elementos */
+}
+
+/* Container responsivo semelhante ao Tailwind */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px; /* Largura máxima semelhante ao Tailwind */
+    padding-left: 1rem; /* Espaçamento lateral */
+    padding-right: 1rem;
+    position: relative;
+    z-index: 2; /* Garante que os ícones e texto fiquem acima da máscara */
+}
+
+/* Ícones sociais - Mantidos à esquerda */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    z-index: 2; /* Garante que os ícones fiquem acima da máscara */
+}
+
+/* Estilo dos ícones */
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    //background-color: rgba(213, 249, 166, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #222;
+}
+
+/* Informações de contato - Mantidas à direita */
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    position: relative;
+    z-index: 2; /* Garante que o texto fique acima da máscara */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact-info {
+        display: none; /* Esconde informações de contato */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 50px;
+        padding: 0 10px;
+    }
+    .container {
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .circle {
+        width: 26px;
+        height: 26px;
+        font-size: 14px;
+    }
+}
+
+
+
+.menu-container {
+  position: relative;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.bg-gray-900 {
+  background-color: #1a202c;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-gray-900 {
+  color: #1a202c;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.hover\:bg-gray-100:hover {
+  background-color: #f7fafc;
+}
+
+.hover\:bg-gray-700:hover {
+  background-color: #4a5568;
+}
+.navbar {
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .search-bar {
+    flex: 1;
+    max-width: 300px;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+  }
+ 
+  .logo {
+    position: absolute;
+    width: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: transparent;
+  }
+
+  
+  .right-items {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .search-bar,
+    .right-items span {
+      display: none; /* Oculta barra de busca e textos */
+    }
+  
+    .logo {
+      width: 100px; /* Ajusta tamanho da logo */
+    }
+  }
+  

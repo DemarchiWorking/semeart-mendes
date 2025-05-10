@@ -1,0 +1,12 @@
+.image {
+    width: 250px;
+    height: 300px;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7); /* Sombra bem curta e forte na parte inferior direita */
+    transition: box-shadow  0.4s ease-in-out;
+}
+
+.image:hover {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.9); /* Sombra mais intensa no hover */
+}

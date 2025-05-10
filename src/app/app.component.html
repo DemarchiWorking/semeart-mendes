@@ -1,0 +1,168 @@
+ 
+<div class="hero-section">
+    <div class="social-icons" style="padding-left: 20%;" >
+        <a href="#"><div class="circle"><i class="fab fa-facebook-f"></i></div></a>
+        <a href="#"><div class="circle"><i class="fab fa-twitter"></i></div></a>
+        <a href="#"><div class="circle"><i class="fab fa-pinterest-p"></i></div></a>
+    </div>
+    <div class="contact-info" style="padding-right: 20%;">
+        <i class="fas fa-phone"></i>
+        <span class="phone-number">(+24) 98457-56xx</span>
+        <span class="service">
+            </span>
+    </div>
+</div>
+            
+
+<nav class="navbar" style=" height: 110px;">
+    <div class="container">
+      <!-- Ícone de menu (visível apenas em telas menores) -->
+      <i class="fas fa-bars menu-icon" *ngIf="isTabletOrMobile()"></i>  
+      <!-- Barra de busca (oculta em telas menores) -->
+      <input
+        *ngIf="!isTabletOrMobile()"
+        type="text"
+        placeholder="Oq procura ?"
+        class="search-bar"
+      />
+  
+      <!-- Logo (sempre visível e ultrapassando o menu) -->
+      <img src="/logo.png" alt="Logo" class="absolute logo" style=" width: 150px; height: 150px;" />
+
+      <!-- -->
+      <!-- Ícones ou textos alinhados à direita -->
+      <div class="right-items" >
+        <span *ngIf="!isTabletOrMobile()">Rastrear pedido</span>
+        <span *ngIf="!isTabletOrMobile()">Minha Conta</span>
+        <span *ngIf="!isTabletOrMobile()">Sacola</span>
+        <i class="fas fa-shopping-cart" *ngIf="isTabletOrMobile()"></i>
+        <!-- <mat-icon class="menu-icon" *ngIf="isTabletOrMobile()">shopping_cart</mat-icon> -->
+      </div>
+    </div>
+  </nav>
+  
+<!---->
+
+<nav class="bg-red-100" style="color: brown;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center w-full">
+          <div class="flex-shrink-0">
+            <span class="text-xl font-bold">Logo</span>
+          </div>
+          <div class="hidden md:block flex-1">
+            <div class="ml-10 flex items-baseline space-x-4">
+                
+                <div *ngFor="let category of categories; trackBy: trackByFn">
+                    <div class="relative group">
+                  <button
+                    class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none"
+                    (mouseenter)="openMenu(category.name)"
+                    (mouseleave)="closeMenu()"
+                  >
+                    {{ category.name }}
+                  </button>
+                  @if (activeMenu === category.name) {
+                    <div
+                      class="absolute z-10 left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition-all duration-300 ease-in-out transform opacity-100 scale-100"
+                      (mouseenter)="openMenu(category.name)"
+                      (mouseleave)="closeMenu()"
+                    >
+                      <div class="py-1">
+                        @for (subcategory of category.subcategories; track subcategory) {
+                          <a
+                            href="#"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          >
+                            {{ subcategory }}
+                          </a>
+                        }
+                      </div>
+                    </div>
+                  }
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="-mr-2 flex md:hidden">
+          <button
+            type="button"
+            class="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none"
+            (click)="toggleMobileMenu()"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    @if (isMobileMenuOpen) {
+      <div class="md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          @for (category of categories; track category.name) {
+            <div>
+              <button
+                class="w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700"
+                (click)="toggleMobileCategory(category.name)"
+              >
+                {{ category.name }}
+              </button>
+              @if (activeMobileCategory === category.name) {
+                <div class="pl-4 space-y-1">
+                  @for (subcategory of category.subcategories; track subcategory) {
+                    <a
+                      href="#"
+                      class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                    >
+                      {{ subcategory }}
+                    </a>
+                  }
+                </div>
+              }
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </nav>
+  
+  <app-carousel></app-carousel>
+ 
+  
+<!---->
+<router-outlet />
+
+
+
+<!-- 
+Menu simples
+<div class="menu">
+    <div class="social-media">
+      <div class="circle"><i class="fab fa-facebook-f"></i></div>
+      <div class="circle"><i class="fab fa-instagram"></i></div>
+      <div class="circle"><i class="fab fa-pinterest-p"></i></div>
+    </div>
+    <div class="contact-info">
+      <span class="phone-number">(32) 98457-5608</span>
+      <i class="fas fa-phone"></i>
+      <span class="service">Atendimento</span>
+    </div>
+  </div>
+  
+
+-->

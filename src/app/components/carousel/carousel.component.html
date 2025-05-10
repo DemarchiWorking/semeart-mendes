@@ -1,0 +1,19 @@
+<div class="relative w-full  mx-auto overflow-hidden">
+    <!-- Imagens -->
+    <div class="flex transition-transform duration-500 ease-in-out" [ngStyle]="{ transform: 'translateX(-' + currentIndex * 100 + '%)' }">
+      <div *ngFor="let img of images" class="w-full flex-shrink-0">
+        <img [src]="img" alt="Imagem do carrossel" class="w-full h-[300px] object-cover mx-auto">
+
+         <!-- <img [src]="img" alt="Imagem do carrossel" >  class="w-full h-auto rounded-lg shadow-lg" /-->
+      </div>
+    </div>
+  
+    <!-- Botões de Navegação -->
+    <button (click)="prevSlide()" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+      ❮
+    </button>
+    <button (click)="nextSlide()" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+      ❯
+    </button>
+  </div>
+

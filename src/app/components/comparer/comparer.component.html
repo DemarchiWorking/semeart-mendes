@@ -1,0 +1,50 @@
+<header class="sc-header">
+  <div class="sc-header__left">
+    <span class="sc-header__logo">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 8px;"><rect x="2" y="14" width="4" height="10" rx="2" fill="#007BFF"/><rect x="8" y="8" width="4" height="16" rx="2" fill="#007BFF"/><rect x="14" y="4" width="4" height="20" rx="2" fill="#007BFF"/><rect x="20" y="2" width="4" height="22" rx="2" fill="#007BFF"/></svg>
+      <span class="sc-header__brand">Social Comparator</span>
+    </span>
+  </div>
+  <nav class="sc-header__right">
+    <a href="#" class="sc-header__link">Dashboard</a>
+    <a href="#" class="sc-header__link">History</a>
+    <a href="#" class="sc-header__link">Settings</a>
+  </nav>
+</header>
+
+<div class="content-wrapper">
+  <h1 class="page-title">Compare Social Profiles</h1>
+
+
+
+<button
+>
+  Compare
+</button>
+
+@if (isComparerMode()) {
+  <div class="comparison-container">
+    @if (channelAData()) {
+      <div class="channel-card">
+        <div class="channel-header">
+         
+          <div class="channel-info">
+            
+          </div>
+        </div>
+    
+
+        <div class="channel-content">
+          <h3 class="content-title">Recent Content</h3>
+          <div class="content-list">
+            <p>lista de conteudos</p>
+          </div>
+        </div>
+    </div>
+    }
+
+
+  </div>
+}
+</div>
+  
