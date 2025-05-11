@@ -1,0 +1,91 @@
+
+        body {
+            margin: 0;
+            font-family: 'Inter', Helvetica, Arial, sans-serif;
+            color: #222222;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            background-color: white;
+            padding: 0 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-container {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 20px;
+        }
+        
+        .search-bar {
+            width: 300px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        
+        .logo-container {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+        
+        .menu-items {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            padding-right: 20px;
+        }
+        
+        .menu-items span {
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        .mobile-menu-icon, .mobile-cart-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .search-bar, .menu-items span {
+                display: none;
+            }
+            
+            .mobile-menu-icon, .mobile-cart-icon {
+                display: block;
+            }
+            
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .search-container {
+                padding-left: 0;
+            }
+        }

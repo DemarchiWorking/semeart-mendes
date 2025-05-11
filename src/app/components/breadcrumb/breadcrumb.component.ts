@@ -1,15 +1,21 @@
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter } from 'rxjs';
-
+interface Breadcrumb {
+    label: string;
+    url: string;
+  }
+  
 @Component({
   selector: 'app-breadcrumb',
-  imports: [],
   templateUrl: './breadcrumb.component.html',
-  styleUrl: './breadcrumb.component.scss'
+  styleUrl: './breadcrumb.component.scss',
+  standalone: true,
+  imports: [CommonModule, NgIf, NgFor, RouterModule] 
 })
 export class BreadcrumbComponent {
-
+ 
     breadcrumbs: Breadcrumb[] = [];
   
     constructor(private router: Router, private route: ActivatedRoute) {}

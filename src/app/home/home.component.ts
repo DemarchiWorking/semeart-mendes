@@ -1,10 +1,10 @@
-import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { CarrouselProdutosComponent } from './../components/carrousel-produtos/carrousel-produtos.component';
+import {  NgFor } from '@angular/common';import { Component } from '@angular/core';
 import { BreadcrumbComponent } from "../components/breadcrumb/breadcrumb.component";
 
 @Component({
   selector: 'app-home',
-  imports: [NgFor, BreadcrumbComponent],
+  imports: [BreadcrumbComponent, CarrouselProdutosComponent],// NgFor,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -35,6 +35,5 @@ export class HomeComponent {
       iconRight: 'fas fa-check-circle'
     }
   ];
-  
-  
+
 }

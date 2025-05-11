@@ -1,15 +1,15 @@
-<p>breadcrumb works!</p>
-<nav class="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
-    <ng-container *ngFor="let item of breadcrumbs; let last = last">
-      <ng-container *ngIf="!last">
-        <a [routerLink]="item.url" class="hover:text-blue-500">
-          {{ item.label }}
-        </a>
-        <span class="mx-2">›</span>
+<!--
+<nav class="flex py-3 px-5 bg-gray-100 rounded-lg">
+  <ul class="flex space-x-2">
+    <li *ngFor="let item of breadcrumbs; let i = index">
+      <ng-container *ngIf="i < breadcrumbs.length - 1">
+        <a [routerLink]="item.link" class="text-blue-600 hover:underline">{{ item.label }}</a>
+        <span class="mx-2 text-gray-500">/</span>
       </ng-container>
-      <span *ngIf="last" class="font-medium text-blue-500">
-        {{ item.label }}
-      </span>
-    </ng-container>
-  </nav>
-  
+      <ng-container *ngIf="i === breadcrumbs.length - 1">
+        <span class="text-gray-700 font-semibold">aa{{ item.label }}</span>
+      </ng-container>
+    </li>
+  </ul>
+</nav>
+-->

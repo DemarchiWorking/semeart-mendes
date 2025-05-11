@@ -1,26 +1,23 @@
-import { CommonModule, NgIf, NgOptimizedImage } from '@angular/common';
+import { CommonModule, NgIf  } from '@angular/common';
+//NgOptimizedImage, NgOptimizedImage
 import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CarouselComponent } from "./components/carousel/carousel.component";
+import { NavRedeSocialComponent } from "./components/nav-rede-social/nav-rede-social.component";
+import { BreadcrumbComponent } from "./components/breadcrumb/breadcrumb.component";
+import { MenuComponent } from "./components/menu/menu.component";
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, NgOptimizedImage, NgIf, CarouselComponent],
+  imports: [RouterOutlet, CommonModule, CarouselComponent, NgIf, NavRedeSocialComponent, BreadcrumbComponent, MenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   standalone: true,
 })
 export class AppComponent {
 
-  screenWidth: number = 1024;
 
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    this.screenWidth = window.innerWidth;
-  }
 
-  isTabletOrMobile(): boolean {
-    return this.screenWidth < 768;
-  }
+
 
   title = 'yt-comparator';
   categories = [

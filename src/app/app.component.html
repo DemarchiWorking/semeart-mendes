@@ -1,47 +1,6 @@
- 
-<div class="hero-section">
-    <div class="social-icons" style="padding-left: 20%;" >
-        <a href="#"><div class="circle"><i class="fab fa-facebook-f"></i></div></a>
-        <a href="#"><div class="circle"><i class="fab fa-twitter"></i></div></a>
-        <a href="#"><div class="circle"><i class="fab fa-pinterest-p"></i></div></a>
-    </div>
-    <div class="contact-info" style="padding-right: 20%;">
-        <i class="fas fa-phone"></i>
-        <span class="phone-number">(+24) 98457-56xx</span>
-        <span class="service">
-            </span>
-    </div>
-</div>
-            
+<app-nav-rede-social></app-nav-rede-social> 
 
-<nav class="navbar" style=" height: 110px;">
-    <div class="container">
-      <!-- Ícone de menu (visível apenas em telas menores) -->
-      <i class="fas fa-bars menu-icon" *ngIf="isTabletOrMobile()"></i>  
-      <!-- Barra de busca (oculta em telas menores) -->
-      <input
-        *ngIf="!isTabletOrMobile()"
-        type="text"
-        placeholder="Oq procura ?"
-        class="search-bar"
-      />
-  
-      <!-- Logo (sempre visível e ultrapassando o menu) -->
-      <img src="/logo.png" alt="Logo" class="absolute logo" style=" width: 150px; height: 150px;" />
-
-      <!-- -->
-      <!-- Ícones ou textos alinhados à direita -->
-      <div class="right-items" >
-        <span *ngIf="!isTabletOrMobile()">Rastrear pedido</span>
-        <span *ngIf="!isTabletOrMobile()">Minha Conta</span>
-        <span *ngIf="!isTabletOrMobile()">Sacola</span>
-        <i class="fas fa-shopping-cart" *ngIf="isTabletOrMobile()"></i>
-        <!-- <mat-icon class="menu-icon" *ngIf="isTabletOrMobile()">shopping_cart</mat-icon> -->
-      </div>
-    </div>
-  </nav>
-  
-<!---->
+<app-menu></app-menu>
 
 <nav class="bg-red-100" style="color: brown;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

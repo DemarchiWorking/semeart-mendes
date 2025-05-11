@@ -15,11 +15,13 @@ export const routes: Routes = [
             {
                 path: '',
                 component: ComparerComponent,
+                data: { breadcrumb: 't1' }
             },
             {
                 path: ':channelA/:channelB',
                 resolve: { data: comparerResolver },
                 component: ComparerComponent,
+                data: { breadcrumb: 't2' }
             }
         ]
     },
@@ -29,11 +31,13 @@ export const routes: Routes = [
             {
                 path: '',
                 component: ComparerComponent,
+                data: { breadcrumb: 't3' }
             },
             {
                 path: ':channelA/:channelB',
                 resolve: { data: comparerResolver },
-                component: ComparerComponent,
+                component: ComparerComponent,        
+                data: { breadcrumb: 't4' }
             }
         ]
     }

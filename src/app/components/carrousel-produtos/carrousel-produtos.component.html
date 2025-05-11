@@ -1,0 +1,132 @@
+<div class="bg-white">
+  <div class="mx-auto max-w-2xl px-4 py-16 lg:max-w-7xl lg:px-8">
+    <h2 class="text-2xl font-bold tracking-tight text-gray-900">Destaque</h2>
+
+    <div class="relative mt-6">
+      <!-- Botões de navegação -->
+      <button (click)="scrollLeft()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 z-10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+      <button (click)="scrollRight()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 z-10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+
+      <!-- Container do carrossel -->
+      <div class="overflow-hidden">
+        <div class="flex transition-transform duration-500 ease-in-out gap-x-6" [style.transform]="transformStyle">
+          <!-- Card 1 -->
+          <div class="min-w-[250px] group relative">
+            <div class="relative">
+              <span class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">-27%</span>
+               <img  src="/home/blusa-croche.png" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-60">
+
+            </div>
+            <div class="mt-2">
+              <span class="bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded">NOVIDADE</span>
+              <h3 class="mt-2 text-sm text-gray-700">
+                <a href="#"> Blusa Croche </a>
+              </h3>
+              <p class="mt-1 text-sm font-medium text-gray-900">R$ 79,90</p>
+              <p class="text-xs text-gray-500">ou 3x de R$ 26,63 sem juros</p>
+              <div class="mt-2 flex space-x-2">
+                <button class="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-300">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                  <span class="ml-1 text-xs">Espiar</span>
+                </button>
+                <button class="flex-1 bg-gray-800 text-white text-sm font-medium py-2 rounded hover:bg-gray-700">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="min-w-[250px] group relative">
+            <div class="relative">
+              <span class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">-27%</span>
+               <img  src="/home/blusa-croche.png" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-60">
+
+            </div>
+            <div class="mt-2">
+              <span class="bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded">NOVIDADE</span>
+              <h3 class="mt-2 text-sm text-gray-700">
+                <a href="#"> Blusa Croche </a>
+              </h3>
+              <p class="mt-1 text-sm font-medium text-gray-900">R$ 79,90</p>
+              <p class="text-xs text-gray-500">ou 3x de R$ 26,63 sem juros</p>
+              <div class="mt-2 flex space-x-2">
+                <button class="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-300">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                  <span class="ml-1 text-xs">Espiar</span>
+                </button>
+                <button class="flex-1 bg-gray-800 text-white text-sm font-medium py-2 rounded hover:bg-gray-700">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="min-w-[250px] group relative">
+            <div class="relative">
+              <span class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">-27%</span>
+               <img  src="/home/blusa-croche.png" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-60">
+
+            </div>
+            <div class="mt-2">
+              <span class="bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded">NOVIDADE</span>
+              <h3 class="mt-2 text-sm text-gray-700">
+                <a href="#"> Blusa Croche </a>
+              </h3>
+              <p class="mt-1 text-sm font-medium text-gray-900">R$ 79,90</p>
+              <p class="text-xs text-gray-500">ou 3x de R$ 26,63 sem juros</p>
+              <div class="mt-2 flex space-x-2">
+                <button class="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-300">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                  <span class="ml-1 text-xs">Espiar</span>
+                </button>
+                <button class="flex-1 bg-gray-800 text-white text-sm font-medium py-2 rounded hover:bg-gray-700">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="min-w-[250px] group relative">
+            <div class="relative">
+              <span class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">-27%</span>
+               <img  src="/home/blusa-croche.png" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-60">
+
+            </div>
+            <div class="mt-2">
+              <span class="bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded">NOVIDADE</span>
+              <h3 class="mt-2 text-sm text-gray-700">
+                <a href="#"> Blusa Croche </a>
+              </h3>
+              <p class="mt-1 text-sm font-medium text-gray-900">R$ 79,90</p>
+              <p class="text-xs text-gray-500">ou 3x de R$ 26,63 sem juros</p>
+              <div class="mt-2 flex space-x-2">
+                <button class="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-300">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                  <span class="ml-1 text-xs">Espiar</span>
+                </button>
+                <button class="flex-1 bg-gray-800 text-white text-sm font-medium py-2 rounded hover:bg-gray-700">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
